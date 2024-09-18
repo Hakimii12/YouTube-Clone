@@ -17,16 +17,14 @@ function Navbar() {
         <div className="flexmiddle flex-div">
         <div className='searchBox flex-div'>
             <input type="text" placeholder='search' className='searchEngne'/>
-            <div className="searchIcon-bar">
             <img src={search_icon} className='searchEngneIcon' />
-            </div>
         </div>
         </div>
         <div className="flexright flex-div">
             <img src={upload_icon} alt="" />
             <img src={more_icon} alt="" />
             <img src={notification_icon} alt="" />
-            <img src={profile_icon} alt="" />
+            <img src={profile_icon} className='profile-pic' />
         </div>
    </nav>
   )
