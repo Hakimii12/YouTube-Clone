@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding:0
+}
+nav{
+    border:2px solid black;
+    padding:10px 2%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgb(0,0,0,0.2);
+    position: sticky;
+    top:0;
+}
+.flexleft .menu_icon{
+    width: 22px;
+}
+.flexleft .logo_icon{
+    width: 130px;
+    margin-left: 20px;
+}
+.flexmiddle{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.flexmiddle .searchEngne{
+    width: 500px;
+    padding-right:5px;
+    border: 2px solid black;
+}
+.flexmiddle .searchEngneIcon{
+    width:px;
+    padding-right:5px;
+    border: 2px solid black;
+}
