@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+}
+.sidebar-container{
+    height: 100vh;
+    width: 20%;
+    position:fixed;
+    margin-left:10px;
+}
+.sidebar-link{
+    display: flex;
+    margin-top: 20px;
+}
+p{margin-left: 15px;
+ }
+.sidebar-container img{
+    width:15px;
+    margin-left: 15px;
+}
+hr{margin:20px 10px;
+    width: 60%;
+}
+.subscription-list .side-link{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.subscription-list img{
+    width:25px;
+    border-radius:50%;
+}
