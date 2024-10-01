@@ -14,9 +14,9 @@ import simon from "../assets/simon.png"
 import tom from "../assets/tom.png"
 import megan from "../assets/megan.png"
 import cameron from "../assets/cameron.png"
-function Sidebar() {
+function Sidebar({sidebar}) {
   return (
-    <div className="sidebar-container">
+    <div className={sidebar?"sidebar-container":"small-sidebarContainer"}>
       <div className="sidebars-link">
          <div className="sidebar-link">
            <img src={home} alt="" /> <p>Home</p>

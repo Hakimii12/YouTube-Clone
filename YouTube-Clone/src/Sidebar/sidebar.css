@@ -4,19 +4,19 @@
 }
 .sidebar-container{
     height: 100vh;
-    width: 20%;
+    width: fit-content;
     position:fixed;
     margin-left:10px;
 }
-.sidebar-link{
+.sidebars-link .sidebar-link{
     display: flex;
+    margin-left: 0;
     margin-top: 20px;
 }
 p{margin-left: 15px;
  }
-.sidebar-container img{
-    width:15px;
-    margin-left: 15px;
+.sidebars-link img{
+    width:25px;
 }
 hr{margin:20px 10px;
     width: 60%;
@@ -29,4 +29,14 @@ hr{margin:20px 10px;
 .subscription-list img{
     width:25px;
     border-radius:50%;
+}
+.small-sidebarContainer{
+    width: fit-content;
+}
+.small-sidebarContainer p{
+  display: none;
+}
+.small-sidebarContainer hr{
+  width: 50%;
+  text-align: center;
 }

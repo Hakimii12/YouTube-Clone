@@ -1,9 +1,9 @@
 import React from 'react'
 import Sidebar from '../../Sidebar/sidebar'
-function Home() {
+function Home({sidebar}) {
   return (
     <div>
-      <Sidebar/>
+      <Sidebar sidebar={sidebar}/>
     </div>
   )
 }

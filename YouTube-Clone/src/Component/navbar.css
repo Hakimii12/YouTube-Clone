@@ -3,9 +3,9 @@ nav {
     display: flex;
     justify-content: space-between;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    position: sticky;
+    /* position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 10; */
 }
 .flexleft {
     display: flex;

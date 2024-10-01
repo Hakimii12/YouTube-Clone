@@ -7,11 +7,11 @@ import more_icon from '../assets/more.png'
 import notification_icon from '../assets/notification.png'
 import profile_icon from '../assets/jack.png'
 import '../Component/navbar.css'
-function Navbar() {
+function Navbar({setSidebar}) {
   return (
    <nav className="flex-div">
         <div className="flexleft flex-div">
-             <img src={menu_icon} className='menu_icon' />
+            <img src={menu_icon} onClick={()=>setSidebar((priev)=>priev ===true? false:true)} className='menu_icon' />
             <img src={logo_icon} className='logo_icon' />
         </div>
         <div className="flexmiddle flex-div">
@@ -29,5 +29,4 @@ function Navbar() {
    </nav>
   )
 }
-
 export default Navbar
