@@ -1,5 +1,8 @@
 .container{
-    border:2px solid rgb(255, 2, 2);
     width: 87%;
     margin-left: 12%;
+}
+.containerlarge-container{
+    width: 95%;
+    margin-left: 5%;
 }
