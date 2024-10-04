@@ -1,0 +1,24 @@
+.feed{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cart{
+    width:220px; 
+    margin: 20px;
+}
+.cart img{
+    width:220px;
+   border-radius: 5px;
+}
+.cart h2{
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin: 5px 0;
+}
+.cart h3{
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin: 6px 0;
+}

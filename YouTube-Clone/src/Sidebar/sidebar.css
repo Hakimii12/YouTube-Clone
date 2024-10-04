@@ -6,12 +6,13 @@
     height: 100vh;
     width: fit-content;
     position:fixed;
-    margin-left:10px;
+    margin-left:10px; 
+    margin-top: 10px;
 }
 .sidebars-link .sidebar-link{
     display: flex;
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 p{margin-left: 15px;
  }
