@@ -22,3 +22,9 @@
     color: #555;
     margin: 6px 0;
 }
+.feed a{
+ text-decoration: none;
+}
+a p{
+    color:#000;
+}

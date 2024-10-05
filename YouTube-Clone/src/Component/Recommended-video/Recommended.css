@@ -1,0 +1,20 @@
+.Recommended-video-container{
+  width: 420px;
+  margin:0 10px 10px 10px;
+}
+.Recommended-video-container img{
+    width: 45%;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+.Recommended-video-container .Recommended-video{
+    display:flex;
+    margin-bottom: 10px;
+}
+.Recommended-video-container  h4{
+    font-size:14px;
+}
+.Recommended-video-container  p{
+    padding-left: 0;
+    font-size:13px;
+}

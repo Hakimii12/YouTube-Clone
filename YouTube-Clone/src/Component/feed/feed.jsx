@@ -1,5 +1,6 @@
 import React from 'react'
 import '../feed/feed.css'
+import { Link } from 'react-router-dom'
 import thumbnail1 from "../../assets/thumbnail1.png"
 import thumbnail2 from '../../assets/thumbnail2.png'
 import thumbnail3 from '../../assets/thumbnail3.png'
@@ -11,12 +12,12 @@ import thumbnail8 from '../../assets/thumbnail8.png'
 function feed() {
   return (
     <div className='feed'>
-      <div className="cart">
+      <Link to='/video' className="cart">
         <img src={thumbnail1} alt="" />
         <h2>Best cchannel to learn coding that help you to a web developer</h2>
         <h3>Greatstack</h3>
         <p>15k view &bull; 2 days ago</p>
-      </div>
+      </Link>
       <div className="cart">
         <img src={thumbnail2} alt="" />
         <h2>Best cchannel to learn coding that help you to a web developer</h2>
