@@ -7,10 +7,11 @@ import share from '../../assets/share.png'
 import jack from '../../assets/jack.png'
 import save from '../../assets/save.png'
 import user_profile from '../../assets/user_profile.jpg'
-function PlayeVideo() {
+function PlayeVideo({id}) {
   return (
     <div className='play-videos'>
-      <video src={video1} controls autoPlay ></video>
+      {/* <video src={video1} controls autoPlay ></video> */}
+      <iframe src={`https://www.youtube.com/embed/${id}`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       <h3>Best YouTube Channel To Learn Web Development</h3>
       <div className="video-info">
       <p>15k view &bull; 2 days ago</p>

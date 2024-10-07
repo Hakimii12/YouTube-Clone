@@ -83,6 +83,38 @@ function Recommended() {
                 <p>199k views</p>
             </div>
         </div>
+        <div className="Recommended-video">
+            <img src={thumbnail2} alt="" />
+            <div className="video-discription">
+                <h4>Best channel that help you to be a web developer</h4>
+                <p>GreatStack</p>
+                <p>199k views</p>
+            </div>
+        </div>
+        <div className="Recommended-video">
+            <img src={thumbnail2} alt="" />
+            <div className="video-discription">
+                <h4>Best channel that help you to be a web developer</h4>
+                <p>GreatStack</p>
+                <p>199k views</p>
+            </div>
+        </div>
+        <div className="Recommended-video">
+            <img src={thumbnail2} alt="" />
+            <div className="video-discription">
+                <h4>Best channel that help you to be a web developer</h4>
+                <p>GreatStack</p>
+                <p>199k views</p>
+            </div>
+        </div>
+        <div className="Recommended-video">
+            <img src={thumbnail2} alt="" />
+            <div className="video-discription">
+                <h4>Best channel that help you to be a web developer</h4>
+                <p>GreatStack</p>
+                <p>199k views</p>
+            </div>
+        </div>
     </div>
   )
 }

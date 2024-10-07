@@ -1,143 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../feed/feed.css'
 import { Link } from 'react-router-dom'
-import thumbnail1 from "../../assets/thumbnail1.png"
-import thumbnail2 from '../../assets/thumbnail2.png'
-import thumbnail3 from '../../assets/thumbnail3.png'
-import thumbnail4 from '../../assets/thumbnail4.png'
-import thumbnail5 from '../../assets/thumbnail5.png'
-import thumbnail6 from '../../assets/thumbnail6.png'
-import thumbnail7 from '../../assets/thumbnail7.png'
-import thumbnail8 from '../../assets/thumbnail8.png'
-function feed() {
+import Converter from '../../Converter'
+import API_KEY from '../../data'
+import moment from 'moment'
+function feed({catagory}) {
+  const [Data,setData]=useState([])
+  const fetchdata=async()=>{
+    const videoList_url=`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=us&videoCategoryId=${catagory}&key=${API_KEY}`
+    await fetch(videoList_url).then(res=>res.json()).then(Data=>setData(Data.items))
+}
+useEffect(()=>{
+   fetchdata()
+},[catagory])
   return (
     <div className='feed'>
-      <Link to='/video' className="cart">
-        <img src={thumbnail1} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
+      {Data.map((data,index)=>{
+        return(
+      <Link to={`/video/${data.id}`} className="cart">
+        <img src={data.snippet.thumbnails.medium.url} alt="" />
+        <h2>{data.snippet.title}</h2>
+        <h3>{data.snippet.channelTitle}</h3>
+        <p  key={index}>{Converter(data.statistics.viewCount)} &bull; {moment(data.snippet.publishedAt).fromNow()}</p>
       </Link>
-      <div className="cart">
-        <img src={thumbnail2} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail3} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail4} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail5} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail6} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail7} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail1} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail2} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail3} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail4} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail5} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail6} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail7} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail1} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail2} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail3} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail4} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail5} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail6} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
-      <div className="cart">
-        <img src={thumbnail7} alt="" />
-        <h2>Best cchannel to learn coding that help you to a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k view &bull; 2 days ago</p>
-      </div>
+        )
+      })}
     </div>
   )
 }

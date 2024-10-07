@@ -5,7 +5,7 @@
 .Recommended-video-container img{
     width: 45%;
     margin-right: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .Recommended-video-container .Recommended-video{
     display:flex;
