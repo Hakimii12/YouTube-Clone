@@ -5,7 +5,6 @@ import '../video/video.css'
 import { useParams } from 'react-router-dom'
 function Video() {
   const {id,setid}=useParams()
-  console.log(id)
   return (
     <div className='video-container'>
       <PlayeVideo id={id}/>
