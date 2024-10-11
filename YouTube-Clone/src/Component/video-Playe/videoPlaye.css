@@ -1,9 +1,9 @@
 .play-videos{
     width:70%;
 }
-iframe{
+.play-videos iframe{
     width: 100%;
-    height: 35%;
+    height: 600px !important;
     border-radius: 20px;
 }
 .play-videos .video-info{
@@ -83,4 +83,22 @@ hr{
 }
 .play-videos .comment-discription{
     margin-top: 5px;
+}
+@media(max-width:1280px){
+    .play-videos{
+        width:58%;
+    }
+    .play-videos iframe{
+        width: 100%;
+        height: 400px !important;
+    }
+}
+@media(max-width:542px){
+    .play-videos{
+        width:100%;
+    }
+    .play-videos iframe{
+        width: 100%;
+        height: 400px !important;
+    }
 }

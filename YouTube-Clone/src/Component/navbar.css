@@ -53,3 +53,14 @@ nav {
     width: 35px;
     border-radius: 50%;
 }
+@media(max-width:542px){
+    nav {
+      width: 500px;
+      overflow: hidden;
+    }
+    .searchBox {
+        width: 150px;
+        margin: 3px;
+        overflow: hidden;
+    }
+}

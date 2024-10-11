@@ -1,5 +1,5 @@
 .Recommended-video-container{
-  width: 420px;
+  width: 430px;
   margin:0 10px 10px 10px;
 }
 .Recommended-video-container img{
@@ -11,10 +11,29 @@
     display:flex;
     margin-bottom: 10px;
 }
-.Recommended-video-container  h4{
+.Recommended-video-container a{
     font-size:14px;
+    text-decoration: none !important;
 }
-.Recommended-video-container  p{
+.Recommended-video-container a{
     padding-left: 0;
     font-size:13px;
+    text-decoration: none !important;
 }
+a{
+    text-decoration: none;
+    color:#555;
+}
+@media(max-width:1280px){
+    .Recommended-video-container{
+        width: 300px;
+        margin:0 10px 10px 10px;
+      }
+}
+@media(max-width:542px){
+    .Recommended-video-container{
+        width:100%;
+        margin:0 10px 10px 10px;
+      }
+}
+

@@ -4,14 +4,15 @@ import like from '../../assets/like.png'
 import dislike from '../../assets/dislike.png'
 import share from '../../assets/share.png'
 import save from '../../assets/save.png'
-import user_profile from '../../assets/user_profile.jpg'
 import API_KEY from '../../data'
 import moment from 'moment'
 import Converter from '../../Converter'
-function PlayeVideo({id}) {
+import { useParams } from 'react-router-dom'
+function PlayeVideo() {
    const [videoinfo,setVideoinfo]=useState(null)
    const [channelinfo,setChannelinfo]=useState(null)
    const [commentinfo,setCommentinfo]=useState([])
+   const {id}=useParams()
    const fetchVideodata=async()=>{
      const vidInfo_url=`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${id}&key=${API_KEY}`
      await fetch(vidInfo_url).then(res=>res.json()).then(data=>setVideoinfo(data.items[0]))
@@ -25,14 +26,13 @@ function PlayeVideo({id}) {
    }
    useEffect(()=>{
      fetchVideodata()
-     console.log(videoinfo)
-   },[])
+   },[id])
    useEffect(()=>{
       fetchChannelinfo()
    },[videoinfo])
   return (
     <div className='play-videos'>
-      <iframe src={`https://www.youtube.com/embed/${id}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src={`https://www.youtube.com/embed/${id}?autoplay=1`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <h3>{videoinfo?videoinfo.snippet.title:'Video Title Not Available'}</h3>
       <div className="video-info">
       <p>{videoinfo?Converter(videoinfo.statistics.viewCount):"information is not provided"} &bull; {videoinfo?moment(videoinfo.snippet.publishedAt).fromNow():"information is not provided"}</p>
@@ -65,7 +65,7 @@ function PlayeVideo({id}) {
             <img src={data.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="" />
             <div className="comment-discription">
             <h4>{data.snippet.topLevelComment.snippet.authorDisplayName}<span>{moment(data.snippet.topLevelComment.snippet.publishedAt).fromNow()}</span></h4>
-            <p>{data.snippet.topLevelComment.snippet.textDisplay}</p>
+            <p>{(data.snippet.topLevelComment.snippet.textDisplay).slice(0,200)}</p>
             </div>
             </div>
             <div className="video-info-icon">

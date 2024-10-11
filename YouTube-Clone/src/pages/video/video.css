@@ -6,3 +6,9 @@
     background-color: #f9f9f9;
     position: absolute;
 }
+@media(max-width:542px){
+    .video-container{
+        margin: 5px;
+        width: 490px;
+    }
+}

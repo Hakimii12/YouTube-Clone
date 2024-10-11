@@ -28,3 +28,21 @@
 a p{
     color:#000;
 }
+@media(max-width:1280px){
+    .feed{
+        margin-left: 50px;
+    }
+}
+@media(max-width:542px){
+    .feed{
+        margin-left: 100px;
+    }
+    .cart{
+        width:300px; 
+        margin: 20px;
+    }
+    .cart img{
+        width:300px;
+       border-radius: 5px;
+    }
+}

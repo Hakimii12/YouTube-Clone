@@ -17,7 +17,7 @@ useEffect(()=>{
     <div className='feed'>
       {Data.map((data,index)=>{
         return(
-      <Link to={`/video/${data.id}`} className="cart">
+      <Link to={`/video/${data.snippet.categoryId}/${data.id}`} className="cart">
         <img src={data.snippet.thumbnails.medium.url} alt="" />
         <h2>{data.snippet.title}</h2>
         <h3>{data.snippet.channelTitle}</h3>
